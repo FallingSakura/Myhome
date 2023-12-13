@@ -18,19 +18,21 @@
       </div>
     </Transition>
     <!-- 一言内容 -->
-    <div class="content" @click="updateHitokoto">
-      <span class="text">{{ hitokotoData.text }}</span>
-      <span class="from">-「&nbsp;{{ hitokotoData.from }}&nbsp;」</span>
-    </div>
+    <Transition name="el-fade-in-linear" mode="out-in">
+      <div :key="hitokotoData.text" class="content" @click="updateHitokoto">
+        <span class="text">{{ hitokotoData.text }}</span>
+        <span class="from">-「&nbsp;{{ hitokotoData.from }}&nbsp;」</span>
+      </div>
+    </Transition>
   </div>
 </template>
 
 <script setup>
-import { reactive, ref, onMounted, h } from "vue";
 import { MusicMenu, Error } from "@icon-park/vue-next";
 import { getHitokoto } from "@/api";
-import debounce from "@/utils/debounce.js";
 import { mainStore } from "@/store";
+import debounce from "@/utils/debounce.js";
+
 const store = mainStore();
 
 // 开启音乐面板按钮显隐
@@ -57,13 +59,13 @@ const getHitokotoData = () => {
           fill: "#efefef",
         }),
       });
+      hitokotoData.text = "这里应该显示一句话";
+      hitokotoData.from = "無名";
     });
 };
 
 // 更新一言数据
 const updateHitokoto = () => {
-  hitokotoData.text = "新的一言正在赶来的路上";
-  hitokotoData.from = "来源加载中";
   // 防抖
   debounce(() => {
     getHitokotoData();
@@ -80,8 +82,7 @@ onMounted(() => {
   width: 100%;
   height: 100%;
   padding: 20px;
-  animation: fade;
-  -webkit-animation: fade 0.5s;
+  animation: fade 0.5s;
   .open-music {
     width: 100%;
     position: absolute;

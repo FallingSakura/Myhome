@@ -14,7 +14,8 @@ Simple little homepage, had enough of the original one and made a new one
 >Due to CDN caching, you may need `Ctrl` + `F5` to force a browser cache refresh to see the latest results
 
 - [無名の主页](https://www.imsyy.top)
-- [無名の主页 - 备用线路](https://home-imsyy.vercel.app/)
+- [無名の主页 - Dev](https://home-imsyy.vercel.app)
+- [無名の主页 - Standby](https://home-5iw.pages.dev)
 
 ### Functions
 
@@ -87,7 +88,7 @@ Now using `HarmonyOS Sans` open source font, using font splitting to improve loa
 
 >Because this site's `CDN` has opened anti-leech, **non-site domain name is not accessible**, please change the font import link to the following content, otherwise **custom fonts will be invalid**
 >
->`https://jsd.onmicrosoft.cn/gh/imsyy/file/font/HarmonyOS_Sans/regular.min.css`
+>`https://cdn.jsdelivr.net/gh/imsyy/file/font/HarmonyOS_Sans/regular.min.css`
 
 <details>
 <summary>old way</summary>

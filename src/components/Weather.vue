@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="weather"
-    v-if="weatherData.adCode.city && weatherData.weather.weather"
-  >
+  <div class="weather" v-if="weatherData.adCode.city && weatherData.weather.weather">
     <span>{{ weatherData.adCode.city }}&nbsp;</span>
     <span>{{ weatherData.weather.weather }}&nbsp;</span>
     <span>{{ weatherData.weather.temperature }}℃</span>
@@ -21,7 +18,6 @@
 </template>
 
 <script setup>
-import { onMounted, reactive, h } from "vue";
 import { getAdcode, getWeather, getOtherWeather } from "@/api";
 import { Error } from "@icon-park/vue-next";
 
