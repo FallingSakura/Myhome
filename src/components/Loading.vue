@@ -47,7 +47,7 @@ const siteName = import.meta.env.VITE_SITE_NAME;
       height: 150px;
       border-radius: 50%;
       border: 3px solid transparent;
-      border-top-color: #ee9ca7;
+      border-top-color: #fff;
       animation: spin 1.8s linear infinite;
       z-index: 2;
 
@@ -60,7 +60,7 @@ const siteName = import.meta.env.VITE_SITE_NAME;
         bottom: 5px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color: #ee9ca7;
+        border-top-color: #a4a4a4;
         animation: spin-reverse 0.6s linear infinite;
       }
 
@@ -73,7 +73,7 @@ const siteName = import.meta.env.VITE_SITE_NAME;
         bottom: 15px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color: #ee9ca7;
+        border-top-color: #d3d3d3;
         animation: spin 1s linear infinite;
       }
     }
@@ -81,7 +81,7 @@ const siteName = import.meta.env.VITE_SITE_NAME;
       display: flex;
       flex-direction: column;
       align-items: center;
-      color: #ee9ca7;
+      color: #fff;
       z-index: 2;
       margin-top: 40px;
       font-size: 24px;
@@ -97,7 +97,7 @@ const siteName = import.meta.env.VITE_SITE_NAME;
     top: 0;
     width: 51%;
     height: 100%;
-    background: #2c3351;
+    background: #333;
     z-index: 1;
     &.section-left {
       left: 0;

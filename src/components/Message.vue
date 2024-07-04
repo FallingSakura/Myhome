@@ -92,18 +92,19 @@ watch(
     flex-direction: row;
     align-items: center;
     animation: fade 0.5s;
+    max-width: 460px;
     .logo-img {
       border-radius: 50%;
       width: 120px;
     }
     .name {
-      width: calc(460px - 120px);
+      width: 100%;
       padding-left: 22px;
       transform: translateY(-8px);
       font-family: "Pacifico-Regular";
 
       .bg {
-        font-size: 4rem;
+        font-size: 5rem;
       }
 
       .sm {
@@ -124,6 +125,10 @@ watch(
           font-size: 4.5rem;
         }
       }
+    }
+
+    @media (max-width: 720px) {
+      max-width: 100%;
     }
   }
 
